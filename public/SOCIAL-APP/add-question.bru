@@ -1,0 +1,16 @@
+meta {
+  name: add-question
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{host}}/question?title=Premiere question&description=Description de ma question
+  body: none
+  auth: none
+}
+
+query {
+  title: Premiere question
+  description: Description de ma question
+}
