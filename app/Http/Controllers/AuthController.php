@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\UserResource;
 use App\Models\User;
 use App\Traits\ApiResponseTrait;
 use Illuminate\Http\Request;
@@ -56,5 +57,17 @@ class AuthController extends Controller
             ['token' => $token, 'user' => Auth::user()],
             'connexion effectue avec succes'
         );
+    }
+
+    public function loggedUser()
+    {
+        return new UserResource(Auth::user());
+    }
+
+    public function logout()
+    {
+        auth()->logout();
+
+        return response()->json(['message', 'Vous vous etes deconnecte']);
     }
 }
