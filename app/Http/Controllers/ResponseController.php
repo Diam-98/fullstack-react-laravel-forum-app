@@ -25,10 +25,9 @@ class ResponseController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreResponseRequest $request, int $id)
+    public function store(StoreResponseRequest $request, $id)
     {
         $request->validated($request->all());
-
 
         Response::create([
             'description' => $request->description,

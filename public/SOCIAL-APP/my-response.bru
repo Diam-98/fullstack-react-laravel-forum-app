@@ -1,0 +1,15 @@
+meta {
+  name: my-response
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{host}}/user/responses
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzEyMzE5MjgyLCJleHAiOjE3MTIzMjI4ODIsIm5iZiI6MTcxMjMxOTI4MiwianRpIjoiNnV5YUNSTUd5a0FhMnp0QyIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FTvQoyZlBt2KQlR0YjhmkkILEK8IxLhvwKDrz9axQTQ
+}
